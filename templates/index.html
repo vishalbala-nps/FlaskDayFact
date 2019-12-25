@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Date Facts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Date Facts</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="jumbotron text-center">
+        <h1>Date Facts</h1>
+        <p>Pick a date for retreving the fact of that day (year will be excluded)</p>
+    
+        <form action="/get_fact" method="GET">
+            Date: <input type="date" name="date" value="2019-01-01">
+            <input type="submit" value="Submit">
+        </form>
+  </div>
+  
+<div class="container text-center">
+    <h1>About the project</h1>
+    <h4>This is a simple Flask Web App written in Python. Based on the date, the app talks to numbersapi.com and gets the fact of the selected date</h4>
+</div>
+
+<footer class="footer bg-primary navbar-fixed-bottom">
+        <div class="container text-center">
+          <small>Developed by Vishal Balasubramanian</small>
+        </div>
+</footer>
+
+</body>
+</html>
