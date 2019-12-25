@@ -11,7 +11,7 @@ def get_fact(tdate):
     CURL = API_URL+month+"/"+date+"/date"
     response = requests.get(CURL)
     if response.status_code != 200:
-        return 1
+        return "error"
     else:   
         return response.text
 
@@ -30,11 +30,10 @@ def main():
 def pod():
     tdate = request.args.get('date')
     fact = get_fact(tdate)
-    return render_template('details.html', tdate=tdate, fact=fact)
-
-
-
-
+    if fact != "error":
+        return render_template('details.html', tdate=tdate, fact=fact)
+    else:
+        return render_template('error.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
