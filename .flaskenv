@@ -1,0 +1,2 @@
+FLASK_APP=dfact.py
+FLASK_DEBUG=1
